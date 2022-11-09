@@ -1,14 +1,9 @@
 import {useState, useEffect} from 'react'
 
 
-
-
-export default function Home({}) {
-
+export default function Home() {
 
   const [data, setData] = useState([])
-
-
   function getData() {
       fetch('https://backend-omega-seven.vercel.app/api/getjoke')
       .then((res) => res.json())
@@ -23,17 +18,18 @@ export default function Home({}) {
 
 
 
-  console.log(data);
-
 
   return (
-    <div>
-      <h1>Programing Jokes</h1>
-      <h1>{data.map(joke => <li>{joke.question}</li>)}</h1>
-      <p>{data.map(joke => <li>{joke.punchline}</li>)}</p>
-      <button onClick={getData}>Next Joke</button>
+    <>
+    <div className='container'>
+    <h1 className='app-topic'>Programing Jokes</h1>
+      <div className='container-inner'>
+          {data.map(joke => <h3 className='question'>{joke.question}</h3>)}
+          {data.map(joke => <h4 className='punchline'>{joke.punchline}</h4>)}
+          <button className='next-btn' onClick={getData}>Next Joke</button>
+        </div>
     </div>
-
+    </>
   )
 }
 
