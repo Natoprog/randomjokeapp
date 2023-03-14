@@ -1,0 +1,19 @@
+.container-inner-skeleton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-skeleton {
+    width: 500px;
+    height: 20px;
+    background-color: rgb(174, 174, 174);
+}
+
+.punchline-skeleton {
+    width: 200px;
+    height: 20px;
+    background-color: rgb(174, 174, 174);
+    margin-top: 5px;
+}
+
