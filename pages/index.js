@@ -49,7 +49,7 @@ export default function HomePage() {
         <h1 className='app-topic'>Programing Jokes</h1>
           <div className='app-theme'>
             <button className='toggle-btn' onClick={handleChangeTheme}>
-              {!isDark ? <DarkModeIcon fontSize='large'/> : <LightModeIcon fontSize='large'/>}
+              {!isDark ? <DarkModeIcon fontSize='large' sx={{color: 'black'}}/> : <LightModeIcon fontSize='large' sx={{color: 'white'}}/>}
             </button>
           </div>
         </header>
