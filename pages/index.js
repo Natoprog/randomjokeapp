@@ -25,7 +25,7 @@ export default function HomePage() {
 
   const getData = () => {
       setLoading(true)
-      fetch('https://backend-omega-seven.vercel.app/api/getjoke')
+      fetch('https://official-joke-api.appspot.com/jokes/programming/random')
       .then((res) => res.json())
       .then((data) => {
         setData(data)
@@ -56,7 +56,7 @@ export default function HomePage() {
         <div className='container-inner'>
               {loading ? <HomapegeSkeleton /> :
                 <>
-                {data.map((joke, i) => <h3 key={i} className='question'>{joke.question}</h3>)}
+                {data.map((joke, i) => <h3 key={i} className='question'>{joke.setup}</h3>)}
                 {data.map((joke, i) => <h4 key={i} className='punchline'>{joke.punchline}</h4>)}
                 </>
               }
