@@ -7,7 +7,6 @@ export default function HomePageSkeleton() {
             <h3 className='question-skeleton'></h3>
             <h4 className='punchline-skeleton'></h4>
           </div>
-      
     </>
   )
 }

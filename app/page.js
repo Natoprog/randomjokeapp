@@ -1,3 +1,5 @@
+'use client'
+
 import {useState, useEffect} from 'react'
 import Head from 'next/head'
 import HomapegeSkeleton from "../components/HomePageSkeleton";
@@ -5,6 +7,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from 'next/link';
+ 
 
 export default function HomePage() {
   const [data, setData] = useState(null)
